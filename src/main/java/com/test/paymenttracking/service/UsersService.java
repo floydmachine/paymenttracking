@@ -23,6 +23,7 @@ public class UsersService {
         users.setContactInfo(dto.getContactInfo());
         users.setRole(dto.getRole());
         users.setCreatedDate(LocalDateTime.now());
+        users.setUsername(dto.getUsername());
         return usersRepo.save(users);
     }
 

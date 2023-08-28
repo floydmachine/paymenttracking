@@ -5,14 +5,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
 @Table(name = "leads")
-public class Leads extends PayDate{
+public class Leads extends PayDate {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +21,7 @@ public class Leads extends PayDate{
     @JoinColumn(name = "clientManagerId")
     private Users clientManager;
 
-    @OneToOne (mappedBy="leads")
+    @OneToOne(mappedBy = "leads")
     private Accounts account;
 
     private String status;

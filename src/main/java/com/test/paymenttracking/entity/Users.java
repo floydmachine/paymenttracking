@@ -20,6 +20,10 @@ public class Users extends PayDate {
     private String lastname;
     private String contactInfo;
 
+    private String username;
+
+    private String password;
+
     private String role;
 
     @OneToOne(mappedBy = "clientManager")
